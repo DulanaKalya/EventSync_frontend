@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ApiService from "../../service/ApiService";
-import ProductList from "../common/ProductList";
+import EventList from "../common/EventList";
 import Pagination from "../common/pagination";
 import '../../style/home.css'
 
 
-const CategoryProductsPage = () => {
+const CategoryEventsPage = () => {
 
     const { categoryId } = useParams();
-    const [products, setProducts] = useState([]);
+    const [events, setEvents] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(0);
     const [error, setError] = useState(null);
@@ -17,18 +17,19 @@ const CategoryProductsPage = () => {
 
 
     useEffect(() => {
-        fetchProducts();
+        fetchEvents();
     }, [categoryId, currentPage]);
 
-    const fetchProducts = async () => {
+    const fetchEvents = async () => {
         try {
 
-            const response = await ApiService.getAllProductsByCategoryId(categoryId);
-            const allProducts = response.productList || [];
-            setTotalPages(Math.ceil(allProducts.length / itemsPerPage));
-            setProducts(allProducts.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage));
+            const response = await ApiService.getAllEventsByCategoryId(categoryId);
+            const allEvents = response.eventList || [];
+            //console.log(allEvents);
+            setTotalPages(Math.ceil(allEvents.length / itemsPerPage));
+            setEvents(allEvents.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage));
         } catch (error) {
-            setError(error.response?.data?.message || error.message || 'unable to fetch products by categoty id')
+            setError(error.response?.data?.message || error.message || 'unable to fetch events by category id')
         }
     }
 
@@ -39,7 +40,7 @@ const CategoryProductsPage = () => {
                 <p className="error-message">{error}</p>
             ):(
                 <div>
-                    <ProductList products={products}/>
+                    <EventList events={events}/>
                     <Pagination  currentPage={currentPage}
                     totalPages={totalPages}
                     onPageChange={(page)=> setCurrentPage(page)}/>
@@ -48,4 +49,4 @@ const CategoryProductsPage = () => {
         </div>
     )
 }
-export default CategoryProductsPage;
+export default CategoryEventsPage;

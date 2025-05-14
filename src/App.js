@@ -7,8 +7,8 @@ import { CartProvider } from './component/context/CartContext';
 import Home from './component/pages/Home';
 import EventDetailsPage from './component/pages/EventDetailsPage';
 import CategoryListPage from './component/pages/CategoryListPage';
-/*import CategoryProductsPage from './component/pages/CategoryProductsPage';
-import CartPage from './component/pages/CartPage';
+import CategoryEventsPage from './component/pages/CategoryEventsPage';
+/*import CartPage from './component/pages/CartPage';
 import RegisterPage from './component/pages/RegisterPage';
 import LoginPage from './component/pages/LoginPage';
 import ProfilePage from './component/pages/ProfilePage';
@@ -33,7 +33,7 @@ function App() {
           <Route exact path='/' element={<Home/>}/>
           <Route path='event/:id' element={<EventDetailsPage/>}/>
           <Route path='/categories' element={<CategoryListPage/>}/>
-          
+          <Route path='/category/:categoryId' element={<CategoryEventsPage/>}/>
           
         </Routes>
       
