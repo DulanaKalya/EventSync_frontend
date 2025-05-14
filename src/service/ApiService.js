@@ -55,30 +55,41 @@ export default class ApiService {
         return response.data;
     }
 
-    static async getAllProducts() {
-        const response = await axios.get(`${this.BASE_URL}/product/get-all`)
+    /*
+    static async updateEvent(eventId, formData) {
+        const response = await axios.put(`${this.BASE_URL}/event/update/${eventId}`, formData, {
+            headers: {
+                ...this.getHeader(),
+                "Content-Type": "multipart/form-data"
+            }
+        });
+        return response.data;
+    }*/
+
+    static async getAllEvents() {
+        const response = await axios.get(`${this.BASE_URL}/event/get-all`)
         return response.data;
     }
 
-    static async searchProducts(searchValue) {
-        const response = await axios.get(`${this.BASE_URL}/product/search`, {
+    static async searchEvents(searchValue) {
+        const response = await axios.get(`${this.BASE_URL}/event/search`, {
             params: { searchValue }
         });
         return response.data;
     }
 
-    static async getAllProductsByCategoryId(categoryId) {
-        const response = await axios.get(`${this.BASE_URL}/product/get-by-category-id/${categoryId}`)
+    static async getAllEventsByCategoryId(categoryId) {
+        const response = await axios.get(`${this.BASE_URL}/event/get-by-category-id/${categoryId}`)
         return response.data;
     }
 
-    static async getProductById(productId) {
-        const response = await axios.get(`${this.BASE_URL}/product/get-by-product-id/${productId}`)
+    static async getEventById(eventId) {
+        const response = await axios.get(`${this.BASE_URL}/event/get-by-event-id/${eventId}`)
         return response.data;
     }
 
-    static async deleteProduct(productId) {
-        const response = await axios.delete(`${this.BASE_URL}/product/delete/${productId}`, {
+    static async deleteEvent(eventId) {
+        const response = await axios.delete(`${this.BASE_URL}/event/delete/${eventId}`, {
             headers: this.getHeader()
         });
         return response.data;
@@ -116,39 +127,39 @@ export default class ApiService {
         return response.data;
     }
 
-    /**ORDEDR */
-    static async createOrder(body) {
-        const response = await axios.post(`${this.BASE_URL}/order/create`, body, {
+    /**Purchase */
+    static async createPurchase(body) {
+        const response = await axios.post(`${this.BASE_URL}/purchase/create`, body, {
             headers: this.getHeader()
         })
         return response.data;
     }
 
-    static async getAllOrders() {
-        const response = await axios.get(`${this.BASE_URL}/order/filter`, {
+    static async getAllPurchases() {
+        const response = await axios.get(`${this.BASE_URL}/purchase/filter`, {
             headers: this.getHeader()
         })
         return response.data;
     }
 
-    static async getOrderItemById(itemId) {
-        const response = await axios.get(`${this.BASE_URL}/order/filter`, {
+    static async getBookEventById(eventId) {
+        const response = await axios.get(`${this.BASE_URL}/purchase/filter`, {
             headers: this.getHeader(),
-            params: {itemId}
+            params: {eventId}
         })
         return response.data;
     }
 
-    static async getAllOrderItemsByStatus(status) {
-        const response = await axios.get(`${this.BASE_URL}/order/filter`, {
+    static async getAllBookEventsByStatus(status) {
+        const response = await axios.get(`${this.BASE_URL}/purchase/filter`, {
             headers: this.getHeader(),
             params: {status}
         })
         return response.data;
     }
 
-    static async updateOrderitemStatus(orderItemId, status) {
-        const response = await axios.put(`${this.BASE_URL}/order/update-item-status/${orderItemId}`, {}, {
+    static async updateBookEventStatus(bookEventId, status) {
+        const response = await axios.put(`${this.BASE_URL}/purchase/update-event-status/${bookEventId}`, {}, {
             headers: this.getHeader(),
             params: {status}
         })

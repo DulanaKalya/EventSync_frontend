@@ -1,0 +1,40 @@
+.event-detail{
+    max-width: 350px;
+    margin: 10rem auto 10rem auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    align-items: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.event-detail img{
+    width: 350px;
+    height: auto;
+}
+
+.event-detail h1{
+    text-align: center;
+}
+.event-detail span{
+    display: block;
+    font-size: 20px;
+    color: #f68b1e;
+}
+.event-detail button{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f68b1e;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.event-detail button:hover{
+    background-color: #8b4c0d;
+}
