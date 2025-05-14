@@ -69,7 +69,7 @@ const CartPage = () => {
         }
 
     };
-
+// bvbvbvb
 
     return (
         <div className="cart-page">
