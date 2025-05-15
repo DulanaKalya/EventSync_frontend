@@ -8,14 +8,14 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #f68b1e;
+    background-color: #8a1ef6;
     padding: 10px 20px;
     font-size: 20px;
     font-family: 600;
 }
 
 .navbar-brand img {
-    height: 40px;
+    height: 60px;
 }
 
 .navbar-search input {
@@ -30,7 +30,7 @@ body {
     border: none;
     margin-left: 2px;
     background-color: #fff;
-    color: #f68b1e;
+    color: #8a1ef6;
     font-weight: bold;
     border-radius: 3px;
     cursor: pointer;

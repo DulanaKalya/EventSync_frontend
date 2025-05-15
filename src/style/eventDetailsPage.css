@@ -22,7 +22,7 @@
 .event-detail span{
     display: block;
     font-size: 20px;
-    color: #f68b1e;
+    color:#8a1ef6;
 }
 .event-detail button{
     display: block;
@@ -30,11 +30,11 @@
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #f68b1e;
+    background-color: #8a1ef6;
     color: white;
     font-size: 16px;
     cursor: pointer;
 }
 .event-detail button:hover{
-    background-color: #8b4c0d;
+    background-color: #8a1ef6;
 }

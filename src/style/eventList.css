@@ -48,7 +48,7 @@
 }
 
 .event-item button {
-    background-color: #f68b1e;
+    background-color:#8a1ef6;
     border: none;
     border-radius: 4px;
     color: #fff;
@@ -60,7 +60,7 @@
 }
 
 .event-item button:hover {
-    background-color: #633d17;
+    background-color:#8a1ef6;
 }
 
 .event-image {
@@ -77,7 +77,7 @@
 }
 
 .quantity-controls button{
-    background-color: #f68b1e;
+    background-color:#8a1ef6;
     border: none;
     border-radius: 4px;
     color: #fff;

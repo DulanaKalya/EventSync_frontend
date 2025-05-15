@@ -39,7 +39,7 @@ const CartPage = () => {
         }
 
         const purchaseEvents = cart.map(item => ({
-            productId: item.id,
+            eventId: item.id,
             quantity: item.quantity
         }));
 
@@ -69,7 +69,7 @@ const CartPage = () => {
         }
 
     };
-// bvbvbvb
+
 
     return (
         <div className="cart-page">
@@ -97,7 +97,7 @@ const CartPage = () => {
                             </li>
                         ))}
                     </ul>
-                    <h2>Total: ${totalPrice.toFixed(2)}</h2>
+                    <h2>Total: Rs {totalPrice.toFixed(2)}</h2>
                     <button className="checkout-button" onClick={handleCheckout}>Checkout</button>
                 </div>
             )}

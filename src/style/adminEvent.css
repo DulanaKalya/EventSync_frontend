@@ -1,0 +1,53 @@
+.admin-event-list{
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    font-size: 16px;
+}
+.event-btn{
+    border-radius: 5px;
+    margin: 5px 0px;
+    padding: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    background-color:#8a1ef6;
+}
+
+.event-btn-delete{
+    border-radius: 5px;
+    margin: 5px 0px;
+    padding: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    background-color: tomato;
+
+}
+.admin-event-list button:hover{
+    background-color: #8a1ef6;
+}
+.admin-event-list ul{
+    list-style-type: none;
+    padding: 0;
+}
+.admin-event-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px 10px 15px;
+    margin-bottom: 1.5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.admin-event-list span{
+    flex: 1;
+    color: #444;
+}
+.admin-event-list button{
+    margin-left: 10px;
+}

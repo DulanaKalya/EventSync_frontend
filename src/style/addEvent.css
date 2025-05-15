@@ -1,0 +1,35 @@
+.event-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 250px;
+}
+
+.event-form input,
+.event-form select,
+.event-form textarea,
+.event-form button {
+    margin: 10x 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.event-form button {
+    background-color: #8a1ef6;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 800;
+}
+
+.event-form button:hover {
+    background-color: #8a1ef6;
+
+}
+
+.event-form img {
+    max-width: 100px;
+    margin: 10px 0;
+}
